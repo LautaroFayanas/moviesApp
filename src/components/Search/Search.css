@@ -1,0 +1,11 @@
+
+.putIn{
+    border: none;
+    height: 25px;
+    margin: 10px;
+}
+
+.button{
+    position: absolute;
+    margin: -5px 5px
+}
