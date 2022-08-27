@@ -5,7 +5,7 @@ import '../components/MoviesCard.css'
 import { Spinner } from '../components/Spinner/Spinner';
 
 
-export const MovieDetail = () => {
+export const MovieDetail = (props) => {
 
   const {movieID} = useParams();
   const [loading, setLoading] = useState(true);
@@ -43,8 +43,12 @@ export const MovieDetail = () => {
         <p> <strong>Vot : </strong> {movie.vote_average}  </p>  
         <hr />
         <p> <strong>Data : </strong> {movie.release_date}  </p> 
+        <p className='text-white '> Peliculas agregadas: {props.favoritos.length} </p>
         <button className='btn btn-primary mt-5'>View Movie</button>
-        <button className='btn btn-primary mt-5 mx-3'>Add to favorite</button>
+        <button 
+                    onClick={props.addOrRemoveFav}
+                    data-movie-id={movieID}
+                    className='favoritos btn btn-danger mt-5 mx-3'>ADD TO FAV ❤️ </button>
       </div>
     </div>
   )

@@ -32,7 +32,7 @@ export const Search = () => {
             type="text" 
             value={searchText} 
             onChange={(e) => setSearchText(e.target.value)} />
-            <button className='btn btn-dark button text-center ' type='submit'><FaSearch size={20}/></button>
+          
         </form>
     </div>
   )
