@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Search } from '../Search/Search';
+import './FavoritoStyle/style.css'
 
 export const Favoritos = (props) => {
     // const [fav , setFav] = useState([]);
@@ -33,11 +33,11 @@ export const Favoritos = (props) => {
                   <div className="card-body">
                     <h2 className="card-title ">{oneMovie.titulo}</h2>
                     <p className="card-title ">{oneMovie.description.substring(0,100)}...</p>
-                    <Link to={'/movies/' + oneMovie.id} className="btn btn-success">View Movie Detail</Link>
+                    <Link to={'/movies/' + oneMovie.id} className="btn btn-success buton">View Movie Detail</Link>
                     <button 
                     data-movie-id={oneMovie.id} 
                     onClick={props.addOrRemoveFav} 
-                    className="btn btn-danger mt-2">Remove to favs </button>
+                    className="btn btn-danger buton mt-2">Remove to favs </button>
 
                   </div>
                 </div>

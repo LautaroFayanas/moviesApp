@@ -1,0 +1,24 @@
+.divContainer{
+    height: 100vh;
+}
+
+@media screen and (max-width: 560px) {
+    .divContainer{
+        display: flex;
+        flex-direction:column;
+        height: 210vh;
+    }
+
+    .divContainer img{
+        width: 80%;
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 0;
+    }
+
+    .favoritos{
+        width: 40%;
+    }
+
+ 
+}

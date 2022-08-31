@@ -15,23 +15,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, 230px);
     gap: 40px;
-
+    
 }
 
 .titleMovie{
     font-size: 18px;
     font-weight: bold;
-}
-
-.divContainer{
-    height: 85vh;
-}
-
-@media (max-width: 560px) {
-    .moviesGrid{
-        grid-template-columns: 100%;
-    }
-    .movieCard img{
-        width: 100%;
-    }
 }

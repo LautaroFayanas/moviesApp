@@ -40,7 +40,7 @@ export const MoviesGrid = () => {
         next={() => setPage((prevPage) => prevPage + 1)} 
         loader={<Spinner />}> 
         
-            <ul className='moviesGrid '>
+            <ul className='moviesGrid'>
                 {movies.map((movie) => {
                     return <MoviesCards key={movie.id} movie={movie} />
                 })}

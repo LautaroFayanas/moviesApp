@@ -1,0 +1,28 @@
+.container{
+    width: 80%;
+}
+
+
+@media screen and (max-width: 560px) {
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .row{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+    }
+
+    .container .row img{
+        margin-top: 15px;
+    }
+
+    .buton{
+        margin: 10px;
+    }
+ 
+}
