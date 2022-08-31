@@ -7,6 +7,7 @@ import { Search } from "./components/Search/Search";
 
 
 
+
 function App() {
 
   const [favoritos , setFavoritos] = useState([]);
@@ -67,16 +68,14 @@ function App() {
 
     <div className="appe">
       <header >
-
-        <Link to={'/Favoritos'} className='text-decoration-none mx-5 pt-3 text-white'> Ir a Favoritos ❤️</Link>
-        <Link className="text-decoration-none text-center " to="/"><h3 className="p-3"> Yourmovies.com </h3> </Link>
+      <Link to={'/Favoritos'} className='text-decoration-none mx-5  text-white'> Ir a Favoritos ❤️</Link>
+        <Link className="text-decoration-none text-center " to="/"><h3 > Yourmovies.com </h3> </Link>
         <Search />
-        
         <hr className="text-white" />
       </header>
       <main>
-        <Routes>
-          <Route path="/" element={<LandingPage favoritos={favoritos}/>}> home </Route>
+        <Routes> 
+          <Route path="/" element={<LandingPage favoritos={favoritos}/>}>  </Route>
           <Route path="/movies/:movieID" element={<MovieDetail favoritos={favoritos} addOrRemoveFav={addOrRemoveFav} />} />
           <Route path="/Favoritos" element={  <Favoritos favoritos={favoritos} addOrRemoveFav={addOrRemoveFav}  /> }>  </Route>
         </Routes>

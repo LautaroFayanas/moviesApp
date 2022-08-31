@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { Search } from '../Search/Search';
 
 export const Favoritos = (props) => {
     // const [fav , setFav] = useState([]);
@@ -15,7 +16,6 @@ export const Favoritos = (props) => {
     
   return (
     <div className='container '>
-
       <h3 className='text-white'> Peliculas Agregadas: {props.favoritos.length} </h3>
       
         <div className='row '>
@@ -23,8 +23,8 @@ export const Favoritos = (props) => {
           props.favoritos.map((oneMovie, idx) => {
             console.log(props.favoritos);
             return (
-              <div key={idx} className='col col-lg-3 mb-5 '>
-                <div className="card m-auto rounded-3 text-center">
+              <div key={idx} className='col col-lg-3 mb-5  '>
+                <div className="card m-auto rounded-3 text-center bg-dark text-white">
                   <img src={oneMovie.img} className="m-auto card-img-top rounded-3 w-50 " alt="..." />
                   {/* <button
                     onClick={props.addOrRemoveFav}
@@ -33,7 +33,7 @@ export const Favoritos = (props) => {
                   <div className="card-body">
                     <h2 className="card-title ">{oneMovie.titulo}</h2>
                     <p className="card-title ">{oneMovie.description.substring(0,100)}...</p>
-                    <Link to={'/movies/' + oneMovie.id} className="btn btn-dark">View Movie Detail</Link>
+                    <Link to={'/movies/' + oneMovie.id} className="btn btn-success">View Movie Detail</Link>
                     <button 
                     data-movie-id={oneMovie.id} 
                     onClick={props.addOrRemoveFav} 

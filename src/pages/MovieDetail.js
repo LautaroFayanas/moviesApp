@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 import { get } from '../Fetch/fetch';
 import '../components/MoviesCard.css'
 import { Spinner } from '../components/Spinner/Spinner';
-
 
 export const MovieDetail = (props) => {
 
@@ -29,7 +28,9 @@ export const MovieDetail = (props) => {
   }
 
   const imgUrl = "https://image.tmdb.org/t/p/w400" + movie.poster_path;
+
   return (
+    <> 
     <div className='justify-content-center 
      m-auto text-white d-flex divContainer'> 
     <img className='rounded-5 m-5 ' src={imgUrl} alt={movie.title} />
@@ -45,11 +46,23 @@ export const MovieDetail = (props) => {
         <p> <strong>Data : </strong> {movie.release_date}  </p> 
         <p className='text-white '> Peliculas agregadas: {props.favoritos.length} </p>
         <button className='btn btn-primary mt-5'>View Movie</button>
+        {
+          props.favoritos?
         <button 
                     onClick={props.addOrRemoveFav}
                     data-movie-id={movieID}
-                    className='favoritos btn btn-danger mt-5 mx-3'>ADD TO FAV ❤️ </button>
+                    className='favoritos btn btn-danger mt-5 mx-3'>REMOVE TO FAV ❤️ 
+        </button>
+        :
+        <button 
+                    onClick={props.addOrRemoveFav}
+                    data-movie-id={movieID}
+                    className='favoritos btn btn-danger mt-5 mx-3'>ADD TO FAV ❤️ 
+        </button>
+
+        }
       </div>
     </div>
+    </>
   )
 }

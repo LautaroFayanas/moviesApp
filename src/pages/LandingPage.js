@@ -1,6 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { useQuery } from '../components/hooks/useQuery';
 import { MoviesGrid } from '../components/MoviesGrid'
+import { Search } from '../components/Search/Search';
 
 
 export const LandingPage = () => {
@@ -10,7 +12,7 @@ export const LandingPage = () => {
 
   return (
     <> 
-    <MoviesGrid key={search} />
+      <MoviesGrid key={search} />
     </>
   )
 }
